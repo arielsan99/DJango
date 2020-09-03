@@ -1,0 +1,21 @@
+body{
+  padding-top:56px;
+  background-color: #FBFBFB;
+}
+
+footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#formss{
+  box-shadow: 2px 2px 9px #666;
+}
+
+.tablep{
+
+background-color: white;
+
+}

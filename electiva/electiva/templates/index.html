@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css'%}">
+  <title>Electiva</title>
+
+</head>
+
+<body> <!--Este estilo hay que modificarlo como corresponde-->
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="margin-bottom:50px">
+    <div class="container">
+      <a class="navbar-brand" href="#">Python con Django</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+
+        <div class="col-md-12 mb-5">
+          <div class="card h-100" >
+            <div class="card-body">
+              <h2 class="card-title">Analísis de notas</h2>
+              <form class="" method="post" action="/previo" onsubmit="" enctype="multipart/form-data">{%csrf_token%}<!--No recuerdo para que es esto-->
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputCity">Estadistico</label>
+                    <input type="text" class="form-control" id="name_stadistic_id" placeholder="Carlos Zea" name="name_stadistic" required>
+                    <div class="invalid-feedback">
+                      Campo necesario
+                    </div>
+                  </div>
+
+                  <div class="form-group col-md-2">
+                    <label for="curso">Curso</label>
+                    <input type="text" class="form-control" id="curso_id" placeholder="10 B" name="curso">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputState">Periodo</label>
+                    <select id="inputState" class="form-control" name="periodo">
+                      <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="">Notas de estudiantes</label><br>
+                    <input class="file-class" type="file" name="csv" accept=".csv" value="" id="csvnotas">
+                  </div>
+                </div>
+                <input class="btn btn-primary" type="submit" name="enviar" value="Calcular">
+              </form>
+              <h1>{{nombre}}</h1>
+          </div>
+        </div>
+
+    </div>
+
+    </div>
+  </div>
+  <br><br>
+  <!-- Footer -->
+  <footer class="py-4 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">I ♥ Django</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+</body>
+
+</html>
