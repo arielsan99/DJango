@@ -38,7 +38,7 @@
           <div class="card h-100" >
             <div class="card-body">
               <h2 class="card-title">Analísis de notas</h2>
-              <form class="" method="post" action="/previo" onsubmit="" enctype="multipart/form-data">{%csrf_token%}<!--No recuerdo para que es esto-->
+              <form class="" method="post" action="/reporte" onsubmit="" enctype="multipart/form-data">{%csrf_token%}<!--No recuerdo para que es esto-->
                 <div class="form-row">
                   <div class="form-group col-md-4">
                     <label for="inputCity">Estadistico</label>
@@ -71,7 +71,6 @@
                 </div>
                 <input class="btn btn-primary" type="submit" name="enviar" value="Calcular">
               </form>
-              <h1>{{nombre}}</h1>
           </div>
         </div>
 

@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style type="text/css">
+    .cardm {
+      position: relative;
+
+      display: inline-block;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      background-color: #fdfdfd;
+      border: black 2px groove;
+      border-radius: 0.25rem;
+    }
+    .colm-md-3 {
+      -ms-flex: 0 0 25%;
+      display: inline-block;
+      flex: 0 0 25%;
+      margin-right:13px
+    }
+
+    .colm-md-4 {
+      -ms-flex: 0 0 28%;
+      display: inline-block;
+      flex: 0 0 25%;
+      max-width: 28%;
+      margin-right: 8%;
+      float:left
+    }
+
+    .rowm {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: 0px;
+      overflow:hidden
+    }
+    .thead-gray{
+      background-color:#CECECE;
+    }
+
+    h4{
+      color:#0404B4;
+    }
+
+    h3{
+      color:#145555;
+    }
+
+    .card-title{
+      color: #0A0A2A;
+    }
+    .head{
+      border: black 1px solid;
+      width: 98.5%;
+      border-radius: 0.10rem;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+
+    }
+
+    .headsubone{
+      width: 60%;
+      margin-top: 2px;
+      margin-left: 38%;
+    }
+    .headsubtwo{
+      float: right;
+      margin: 2px;
+      margin-right: 7
+      px;
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <title>Reporte</title>
+</head>
+<body><br>
+  <div class="container" border="solid 2px red">
+    <div class="head">
+      <div class="headsubone">
+        <FONT FACE="times new roman" SIZE=5>Reporte estadistico de notas</FONT>
+      </div>
+      <div class="headsubtwo rown">
+        <div class="">
+          <div class="col-md-4">
+            <FONT FACE="times new roman" SIZE=5><i>Estadistico:{{nombre}}</i></FONT>
+          </div>
+          <div class="col-md-4">
+            <FONT FACE="times new roman" SIZE=5><i>Periodo:{{periodo}}</i></FONT>
+          </div>
+          <div class="col-md-4">
+            <FONT FACE="times new roman" SIZE=5><i>Curso:{{curso}}</i></FONT>
+          </div>
+        </div>
+      </div>
+
+    </div><br>
+    <div class="cardm" align="rigth" style="width: 99%;">
+      <div class="card-body">
+        <h4 class="card-title">Datos estadisticos</h4><br>
+        <div class="rowm nom-gutters justifym-content-between" >
+          <div class="colm-md-3" >
+            <h4 class="card-subtitle mb-2">Media del curso:</h4>
+            <FONT FACE="verdana" SIZE=4>{{datos.0}}</FONT>
+          </div>
+          <div class="colm-md-3" >
+            <h4 class="card-subtitle mb-2">Moda de las notas:</h4>
+            <FONT FACE="verdana" SIZE=4>{{datos.1}}</FONT>
+          </div>
+          <div class="colm-md-3" >
+            <h4 class="card-subtitle mb-2">Promedio mas alto:</h4>
+            <FONT FACE="verdana" SIZE=4>{{datos.2}}</FONT>
+          </div>
+          <div class="colm-md-3" >
+            <h4 class="card-subtitle mb-2">Promedio mas bajo:</h4>
+            <FONT FACE="verdana" SIZE=4>{{datos.3}}</FONT>
+          </div>
+        </div><br>
+
+      </div>
+    </div> <br> <br>
+    <div>
+        {{i|safe}}
+    </div>
+  </div>
+  </div>
+  <br>
+</body>

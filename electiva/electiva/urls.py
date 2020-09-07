@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from electiva.views import index, previo
+from electiva.views import index, reporte
 
 urlpatterns = [
     path('', index),
-    path('previo',previo)
+    path('reporte',reporte)
 ]
